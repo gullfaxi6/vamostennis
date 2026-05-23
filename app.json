@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Vamos Tennis",
+    "slug": "vamostennis",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#F5EDE0"
+    },
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F5EDE0"
+      }
+    }
+  }
+}
