@@ -8,6 +8,7 @@ export const COLORS = {
   darkBrown: '#2C1010',
   textSecondary: '#8B6B5E',
   white: '#FFFFFF',
+  lightGray: '#E8DDD0',
   black: '#000000',
   transparent: 'transparent',
   overlay: 'rgba(0, 0, 0, 0.5)',

@@ -242,7 +242,6 @@ const styles = StyleSheet.create({
   privilegeItem: {
     flex: 1,
     alignItems: 'center',
-    gap: 6,
   },
   privilegeIconWrap: {
     width: 36,
@@ -277,7 +276,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#C5B9A0',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 6,
   },
   atelierPlaceholderText: {
     fontFamily: FONTS.sans,

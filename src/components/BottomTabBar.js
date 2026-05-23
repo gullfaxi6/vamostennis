@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.cream,
     borderTopWidth: 0.5,
     borderTopColor: COLORS.gold,
-    height: 70,
     paddingTop: 8,
     ...Platform.select({
       ios: {

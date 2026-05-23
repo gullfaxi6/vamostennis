@@ -61,11 +61,11 @@ const HomeScreen = ({ navigation }) => {
               <Text style={styles.eventPreviewTitle}>{nextEvent.title}</Text>
               <Text style={styles.eventPreviewSubtitle}>{nextEvent.subtitle}</Text>
               <View style={styles.eventMeta}>
-                <Ionicons name="time-outline" size={12} color={COLORS.gold} />
+                <Ionicons name="time-outline" size={12} color={COLORS.gold} style={styles.eventMetaIcon} />
                 <Text style={styles.eventMetaText}>{nextEvent.dayLabel}</Text>
               </View>
               <View style={styles.eventMeta}>
-                <Ionicons name="location-outline" size={12} color={COLORS.gold} />
+                <Ionicons name="location-outline" size={12} color={COLORS.gold} style={styles.eventMetaIcon} />
                 <Text style={styles.eventMetaText}>{nextEvent.location}</Text>
               </View>
             </View>
@@ -78,7 +78,7 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.sectionTitle}>DÉCOUVRIR</Text>
         <View style={styles.quickActions}>
           <TouchableOpacity
-            style={styles.quickActionCard}
+            style={[styles.quickActionCard, styles.quickActionLeft]}
             activeOpacity={0.85}
             onPress={() => navigation.navigate('Events')}
           >
@@ -237,7 +237,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 4,
-    gap: 5,
+  },
+  eventMetaIcon: {
+    marginRight: 5,
   },
   eventMetaText: {
     fontFamily: FONTS.sans,
@@ -247,7 +249,9 @@ const styles = StyleSheet.create({
   },
   quickActions: {
     flexDirection: 'row',
-    gap: 12,
+  },
+  quickActionLeft: {
+    marginRight: 12,
   },
   quickActionCard: {
     flex: 1,
@@ -277,11 +281,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     marginTop: 8,
-    gap: 16,
   },
   valueItem: {
     alignItems: 'center',
-    gap: 6,
+    marginHorizontal: 8,
   },
   valueLine: {
     width: 20,

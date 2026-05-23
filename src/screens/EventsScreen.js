@@ -81,11 +81,11 @@ const EventsScreen = () => {
               <Text style={styles.featuredSubtitle}>{featuredEvent.subtitle}</Text>
 
               <View style={styles.featuredDetail}>
-                <Ionicons name="time-outline" size={13} color={COLORS.cream} />
+                <Ionicons name="time-outline" size={13} color={COLORS.cream} style={styles.featuredDetailIcon} />
                 <Text style={styles.featuredDetailText}>{featuredEvent.dayLabel}</Text>
               </View>
               <View style={styles.featuredDetail}>
-                <Ionicons name="location-outline" size={13} color={COLORS.cream} />
+                <Ionicons name="location-outline" size={13} color={COLORS.cream} style={styles.featuredDetailIcon} />
                 <Text style={styles.featuredDetailText}>{featuredEvent.location}</Text>
               </View>
             </View>
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   featuredBottom: {
-    gap: 4,
+    marginBottom: 0,
   },
   featuredTitle: {
     fontFamily: FONTS.serif,
@@ -257,8 +257,10 @@ const styles = StyleSheet.create({
   featuredDetail: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
     marginTop: 2,
+  },
+  featuredDetailIcon: {
+    marginRight: 6,
   },
   featuredDetailText: {
     fontFamily: FONTS.sans,
