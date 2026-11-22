@@ -1,45 +1,29 @@
-# Mission Multipli 🚀
+# Géo Explorateur — L'aventure d'Eliott 🧭
 
-Une application web installable (PWA) en français pour entraîner les tables de multiplication de 2 à 12, pensée pour Diane, 11 ans, en 6e.
+Application éducative mobile (PWA), autonome et sans compte, basée sur la leçon de géographie manuscrite d'Eliott : **GE01 – Les outils pour questionner l'espace : comment se repérer dans l'espace ?**
 
-## Pourquoi ce jeu
-- 3 mini-jeux : Chasse aux étoiles (QCM), Code secret (saisie) et Cartes mémoire (rappel).
-- Missions courtes de 10 questions, sans chronomètre et sans pénalité humiliante.
-- Aides visuelles, décomposition des calculs, second essai encouragé.
-- Les calculs difficiles reviennent plus fréquemment : entraînement adaptatif.
-- Étoiles, historique et tableau de bord parent.
-- Une session de 5 à 8 minutes par jour est conseillée.
+## Mini-jeux
 
-## Installer sur un téléphone
+- **Le bon outil** : choisir entre plan, carte et planisphère, et les classer du plus petit au plus grand.
+- **Boussole magique** : identifier nord, sud, est, ouest.
+- **Décodeur de carte** : titre, orientation, légende, échelle.
+- **Grande exploration** : questions mélangées, y compris les six continents de la leçon.
+- **Relire ma leçon** : fiches de rappel exactes d'après la copie.
 
-1. Déployer **tous les fichiers de ce dossier à la racine d'un site HTTPS** : Vercel, Cloudflare Pages, Netlify ou autre.
-2. **iPhone :** ouvrir l'URL sur Safari, toucher **Partager** puis **Sur l'écran d'accueil** → **Ajouter**.
-3. **Android :** ouvrir l'URL dans Chrome, menu **⋮** → **Installer l'application** (ou **Ajouter à l'écran d'accueil**).
-4. Après la première visite en ligne et la mise en cache, l'application peut fonctionner hors connexion.
+Chaque partie se déroule en 8 questions (ou 12 pour la grande exploration), sans chronomètre. Après une première erreur, l'enfant peut réessayer. Le tableau Parents affiche les acquis par thème. PIN local : celui défini par le parent, dans `app.js` (protection légère côté client).
 
-> Ne pas lancer la PWA directement comme fichier `file://` pour l'installation et le service worker : il faut du HTTPS (ou `localhost` pour les tests).
+## Installer sur téléphone
 
-## Tester en local
+Une fois le site déployé sur HTTPS :
+- iPhone/iPad : Safari → Partager → Sur l'écran d'accueil → Ajouter.
+- Android : Chrome → menu ⋮ → Installer l'application ou Ajouter à l'écran d'accueil.
 
-```bash
-python -m http.server 8000
-# Ouvrir http://localhost:8000
-```
+Après la première visite, l'application et les illustrations sont conservées en cache pour fonctionner hors connexion. La progression est sauvegardée dans `localStorage` du même appareil/navigateur ; elle ne se synchronise pas entre appareils et sera perdue si les données du site sont effacées.
 
-Aucune compilation et aucune dépendance : HTML, CSS, JavaScript et icônes statiques.
+## Publication
 
-## Données et confidentialité
+Site statique sans dépendances et sans construction : `index.html`, `style.css`, `app.js`, manifest, icônes et service worker. Déploiement sur Vercel, GitHub Pages, Cloudflare Pages ou tout hébergeur HTTPS.
 
-- Aucun compte et aucun service tiers ; aucune donnée envoyée à un serveur.
-- Statistiques conservées localement dans le navigateur via `localStorage` (clé `missionMultipli_v1`).
-- Supprimer les données du navigateur, réinstaller ou changer de téléphone peut faire perdre les résultats.
-- Les parents peuvent effacer les progrès dans le tableau de bord.
+## Confidentialité
 
-## Structure
-
-- `index.html` : application et trois jeux.
-- `manifest.webmanifest` : déclaration d'installation PWA.
-- `sw.js` : cache pour jouer hors connexion.
-- `icon*.png`, `icon.svg`, `apple-touch-icon.png` : icônes Android et iOS.
-
-Projet indépendant des applications de tennis, sans code ni identifiants partagés.
+Pas de compte utilisateur, aucune API, aucune publicité, aucune donnée personnelle envoyée à un serveur. Le code parent est uniquement un verrouillage d'interface et **ne constitue pas une authentification sécurisée**.
