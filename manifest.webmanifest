@@ -1,0 +1,14 @@
+{
+  "id":"./",
+  "name":"Miroir Magique — Symétrie de 6e",
+  "short_name":"Miroir Magique",
+  "description":"Apprendre la symétrie axiale en manipulant les figures au doigt. Pour Diane, 6e.",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "lang":"fr",
+  "theme_color":"#171833",
+  "background_color":"#12142e",
+  "orientation":"any",
+  "icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}
